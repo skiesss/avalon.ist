@@ -149,9 +149,6 @@ class Navbar extends React.PureComponent<{ username: string; style?: any; dispat
           <div id="Navbar-Mobile" className="section">
             <div className="logo" />
             <div>
-              <button onClick={this.toggleSettings}>
-                <FontAwesomeIcon icon={faCog} />
-              </button>
               <button onClick={this.toggleSidebar}>
                 <FontAwesomeIcon icon={faList} />
               </button>
@@ -179,7 +176,9 @@ class Navbar extends React.PureComponent<{ username: string; style?: any; dispat
                 <>
                   {' '}
                   <Link to={'/profile/' + this.props.username}>PROFILE</Link>
-                  <button onClick={this.hideSidebarToSettings}>SETTINGS</button>
+                  <button onClick={this.hideSidebarToSettings}>
+                    <FontAwesomeIcon icon={faCog} />
+                  </button>
                   <button onClick={this.handleLogout}>LOG OUT</button>
                 </>
               ) : (
