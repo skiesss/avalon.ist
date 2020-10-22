@@ -130,6 +130,9 @@ class GameList extends React.PureComponent<{}, GameListState> {
           <p>CURRENT GAMES</p>
         </h3>
         <div className="game-list-settings">
+          <button className="game-list-filters">
+            FILTERS
+          </button>
           <button className="game-list-create" onClick={() => this.setState({ showCreate: !this.state.showCreate })}>
             CREATE
           </button>

@@ -32,7 +32,7 @@
   .light {
     #Game-List {
       .game-list-settings {
-        background: rgba(0, 0, 0, 0.05);
+        background: Globals.$light-2;
         button {
           color: Globals.$gray-1;
           background-color: Globals.$light-1;
@@ -81,10 +81,12 @@
     }
     .game-list-settings {
       display: flex;
-      flex-direction: row-reverse;
+      gap: 0.1em;
+      align-items: stretch;
+      justify-content: space-between;
       button {
         display: block;
-        flex: 0 0 40%;
+        flex: 1 1 50%;
         margin: 0px;
         border-radius: 0px;
         font-size: $base-font-size * 0.3;
