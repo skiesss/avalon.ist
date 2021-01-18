@@ -6,7 +6,8 @@ import React, { FormEvent, createRef } from 'react';
 import { rootType } from '../../redux/reducers';
 import { setMessageDelay } from '../../redux/actions';
 import { connect } from 'react-redux';
-import AvalonScrollbars from '../../components/utils/AvalonScrollbars';
+import InfiniteScrollbars from '../../components/utils/InfiniteScrollbars';
+// import AvalonScrollbars from '../../components/utils/AvalonScrollbars';
 import { ChatInput } from '../../components/utils/Input';
 import MessageBuilder from './MessageBuilder';
 import TooFast from './ChatTooFast';
@@ -103,7 +104,7 @@ class Chat extends React.PureComponent<ChatProps, ChatState> {
     form: FormType.None,
   };
 
-  refScrollbars = createRef<AvalonScrollbars>();
+  refScrollbars = createRef<InfiniteScrollbars>();
   refInput = createRef<ChatInput>();
 
   componentDidMount = () => {
@@ -161,7 +162,141 @@ class Chat extends React.PureComponent<ChatProps, ChatState> {
     socket.on(events[0], this.parseMessages);
     socket.on(events[3], this.commandResponseMessage);
 
-    this.setState({ messages: [] });
+    this.setState({ messages: [
+      {
+        from: 'f',
+        content: `0Native browser scroll behavior - it don't emulate scrolling, only showing custom scrollbars, scrolling itself still native
+        Cross-browser and cross-platform - does not matter where and how, scrollbars looks the same everywhere
+        Ultimate performance - 60 FPS (using RAF) and highly optimised code
+        No extra stylesheets required - minimum inline styles out of the box or you can style it yourself however you want
+        Fully customizable - want a hippo as a scrollbar thumb? Well.. I don't judge you, you're free to do it!
+        Scrollbars nesting
+        Total tests coverage
+        Momentum scrolling for iOS
+        RTL support (read more)
+        Content sizes translation (read more)
+        Proper page zoom handling (native scrollbars does not show up)`,
+        hour: '1',
+        id: 1,
+        timestamp: 1,
+        type: '1',
+        public: true,
+      },
+      {
+        from: 'f',
+        content: `1Native browser scroll behavior - it don't emulate scrolling, only showing custom scrollbars, scrolling itself still native
+        Cross-browser and cross-platform - does not matter where and how, scrollbars looks the same everywhere
+        Ultimate performance - 60 FPS (using RAF) and highly optimised code
+        No extra stylesheets required - minimum inline styles out of the box or you can style it yourself however you want
+        Fully customizable - want a hippo as a scrollbar thumb? Well.. I don't judge you, you're free to do it!
+        Scrollbars nesting
+        Total tests coverage
+        Momentum scrolling for iOS
+        RTL support (read more)
+        Content sizes translation (read more)
+        Proper page zoom handling (native scrollbars does not show up)`,
+        hour: '1',
+        id: 1,
+        timestamp: 1,
+        type: '1',
+        public: true,
+      },
+      {
+        from: 'f',
+        content: `2Native browser scroll behavior - it don't emulate scrolling, only showing custom scrollbars, scrolling itself still native
+        Cross-browser and cross-platform - does not matter where and how, scrollbars looks the same everywhere
+        Ultimate performance - 60 FPS (using RAF) and highly optimised code
+        No extra stylesheets required - minimum inline styles out of the box or you can style it yourself however you want
+        Fully customizable - want a hippo as a scrollbar thumb? Well.. I don't judge you, you're free to do it!
+        Scrollbars nesting
+        Total tests coverage
+        Momentum scrolling for iOS
+        RTL support (read more)
+        Content sizes translation (read more)
+        Proper page zoom handling (native scrollbars does not show up)`,
+        hour: '1',
+        id: 1,
+        timestamp: 1,
+        type: '1',
+        public: true,
+      },
+      {
+        from: 'f',
+        content: `3Native browser scroll behavior - it don't emulate scrolling, only showing custom scrollbars, scrolling itself still native
+        Cross-browser and cross-platform - does not matter where and how, scrollbars looks the same everywhere
+        Ultimate performance - 60 FPS (using RAF) and highly optimised code
+        No extra stylesheets required - minimum inline styles out of the box or you can style it yourself however you want
+        Fully customizable - want a hippo as a scrollbar thumb? Well.. I don't judge you, you're free to do it!
+        Scrollbars nesting
+        Total tests coverage
+        Momentum scrolling for iOS
+        RTL support (read more)
+        Content sizes translation (read more)
+        Proper page zoom handling (native scrollbars does not show up)`,
+        hour: '1',
+        id: 1,
+        timestamp: 1,
+        type: '1',
+        public: true,
+      },
+      {
+        from: 'f',
+        content: `4Native browser scroll behavior - it don't emulate scrolling, only showing custom scrollbars, scrolling itself still native
+        Cross-browser and cross-platform - does not matter where and how, scrollbars looks the same everywhere
+        Ultimate performance - 60 FPS (using RAF) and highly optimised code
+        No extra stylesheets required - minimum inline styles out of the box or you can style it yourself however you want
+        Fully customizable - want a hippo as a scrollbar thumb? Well.. I don't judge you, you're free to do it!
+        Scrollbars nesting
+        Total tests coverage
+        Momentum scrolling for iOS
+        RTL support (read more)
+        Content sizes translation (read more)
+        Proper page zoom handling (native scrollbars does not show up)`,
+        hour: '1',
+        id: 1,
+        timestamp: 1,
+        type: '1',
+        public: true,
+      },
+      {
+        from: 'f',
+        content: `5Native browser scroll behavior - it don't emulate scrolling, only showing custom scrollbars, scrolling itself still native
+        Cross-browser and cross-platform - does not matter where and how, scrollbars looks the same everywhere
+        Ultimate performance - 60 FPS (using RAF) and highly optimised code
+        No extra stylesheets required - minimum inline styles out of the box or you can style it yourself however you want
+        Fully customizable - want a hippo as a scrollbar thumb? Well.. I don't judge you, you're free to do it!
+        Scrollbars nesting
+        Total tests coverage
+        Momentum scrolling for iOS
+        RTL support (read more)
+        Content sizes translation (read more)
+        Proper page zoom handling (native scrollbars does not show up)`,
+        hour: '1',
+        id: 1,
+        timestamp: 1,
+        type: '1',
+        public: true,
+      },
+      {
+        from: 'f',
+        content: `6Native browser scroll behavior - it don't emulate scrolling, only showing custom scrollbars, scrolling itself still native
+        Cross-browser and cross-platform - does not matter where and how, scrollbars looks the same everywhere
+        Ultimate performance - 60 FPS (using RAF) and highly optimised code
+        No extra stylesheets required - minimum inline styles out of the box or you can style it yourself however you want
+        Fully customizable - want a hippo as a scrollbar thumb? Well.. I don't judge you, you're free to do it!
+        Scrollbars nesting
+        Total tests coverage
+        Momentum scrolling for iOS
+        RTL support (read more)
+        Content sizes translation (read more)
+        Proper page zoom handling (native scrollbars does not show up)`,
+        hour: '1',
+        id: 1,
+        timestamp: 1,
+        type: '1',
+        public: true,
+      },
+    ] });
 
     socket.emit(events[1]);
 
@@ -518,17 +653,19 @@ class Chat extends React.PureComponent<ChatProps, ChatState> {
 
   render() {
     const { messages, form } = this.state;
-
+    const { code } = this.props;
+    const showMessages = messages.length && (code === undefined || code !== '-1') ? true : false;
+    
     return (
       <div id="Chat" className="row">
-        {this.state.messages.length &&
-        (this.props.code === undefined || this.props.code !== '-1') ? (
-          <AvalonScrollbars ref={this.refScrollbars} key={'real'}>
-            {messages.map(this.messageMapper)}
-          </AvalonScrollbars>
-        ) : (
-          <AvalonScrollbars ref={this.refScrollbars} key={'fake'} />
-        )}
+        {
+          <InfiniteScrollbars
+            ref={this.refScrollbars}
+            key={showMessages ? 'real' : 'fake'}
+            data={messages.map(this.messageMapper)}
+            >
+          </InfiniteScrollbars>
+        }
         {this.props.stage === 'REPLAY' ? null : (
           <form className="message-input" onSubmit={this.handleSubmit}>
             <ChatInput ref={this.refInput} autoComplete={this.state.playerList} />
